@@ -5,6 +5,7 @@ WORKDIR /src/app/
 # mvn needs a user.home in which to run as non-root
 # https://hub.docker.com/_/maven , "Running as non-root"
 # hence the mkdir and USER command later on
+
 RUN ["mkdir", "/home/projects"]
 
 RUN groupadd projects && useradd -g projects projects && \
